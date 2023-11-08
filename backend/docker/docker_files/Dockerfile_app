@@ -5,14 +5,14 @@ ENV PYTHONDONTWRITEBYTECODE 1
 
 RUN set -e; \
     apt-get update ;\
-    apt-get -y install netcat ;\
+    apt-get -y install netcat-traditional ;\
     apt-get -y install gettext ;\
-    apt-get -y  install httpie; \
-    pip install --upgrade pip \
+    apt-get -y install httpie ;\
+    pip install --upgrade pip ;\
     pip install flask
 
 RUN mkdir /code
 WORKDIR /code
 COPY ./server.py .
 
-ENTRYPOINT ["python","./server.py"]
+ENTRYPOINT ["python", "./server.py"]
