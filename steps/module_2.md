@@ -137,8 +137,8 @@ urlpatterns += [
 
 > Note: We are using the default db.sqlite3 database.
 ```
-python manage.py makemigrations
-python manage.py migrate
+python3 manage.py makemigrations
+python3 manage.py migrate
 ```
 
 You should see this log similar to the following.
@@ -168,7 +168,7 @@ Running migrations:
 
 5) Local server - Django has a built in development server which is a lightweight web server written purely in Python. Django's development server allows us to develop things rapidly, without having to deal with configuring a production server – such as Apache – until you’re ready for production. Use the following command to start a local development server
 ```
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 You should see this log.
