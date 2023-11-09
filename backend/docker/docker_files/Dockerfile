@@ -5,11 +5,12 @@ ENV PYTHONDONTWRITEBYTECODE 1
 
 RUN set -e; \
     apt-get update ;\
-    apt-get -y install netcat ;\
+    apt-get -y install netcat-traditional ;\
     apt-get -y install gettext ;
 
 RUN mkdir /code
 COPY . /code/
+COPY ./docker/entrypoints/entrypoint.sh /code/docker/entrypoints/entrypoint.sh
 WORKDIR /code
 
 RUN set -e; \
