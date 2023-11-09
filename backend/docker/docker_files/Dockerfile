@@ -10,7 +10,6 @@ RUN set -e; \
 
 RUN mkdir /code
 COPY . /code/
-COPY ./docker/entrypoints/entrypoint.sh /code/docker/entrypoints/entrypoint.sh
 WORKDIR /code
 
 RUN set -e; \
@@ -19,6 +18,7 @@ RUN set -e; \
     chmod +x /code/docker/entrypoints/entrypoint.sh ;
 
 EXPOSE 8000
+USER root
 ENTRYPOINT ["/code/docker/entrypoints/entrypoint.sh"]
 
 
