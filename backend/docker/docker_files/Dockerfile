@@ -19,6 +19,6 @@ RUN set -e; \
 
 EXPOSE 8000
 
-ENTRYPOINT ["/backend/docker/entrypoints/entrypoint.sh"]
+ENTRYPOINT ["/code/docker/entrypoints/entrypoint.sh"]
 
 
