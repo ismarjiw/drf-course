@@ -14,11 +14,11 @@ WORKDIR /code
 
 RUN set -e; \
     /usr/local/bin/python -m pip install --upgrade pip ;\
-    python -m pip install -r /requirements.txt ;\
-    chmod +x /docker/entrypoints/entrypoint.sh ;
+    python -m pip install -r /code/requirements.txt ;\
+    chmod +x /code/docker/entrypoints/entrypoint.sh ;
 
 EXPOSE 8000
 
-ENTRYPOINT ["/code/docker/entrypoints/entrypoint.sh"]
+ENTRYPOINT ["sh", "/code/docker/entrypoints/entrypoint.sh"]
 
 
