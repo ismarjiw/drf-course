@@ -147,4 +147,6 @@ CORS_ALLOWED_ORIGINS = [
     "https://8000-ismarjiw-drfcourse-mzwaku5bruw.ws-us106.gitpod.io"
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-ismarjiw-drfcourse-mzwaku5bruw.ws-us106.gitpod.io']
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-ismarjiw-drfcourse-mzwaku5bruw.ws-us106.gitpod.io'
+]
